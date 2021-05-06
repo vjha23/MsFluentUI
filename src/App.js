@@ -1,23 +1,28 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Navigation from './Navigation';
+import 'office-ui-fabric-react/dist/css/fabric.css'
+import CardSection from './CardSection'
+import OperationTable from './OperationTable';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div class="ms-Grid" dir="ltr">
+      <div class="ms-Grid-row">
+        <div class="ms-Grid-col ms-sm-1 ms-xl1">
+          <Navigation />
+        </div>
+        <div className='ms-Grid-col ms-sm11 ms-xl11 main-elment'>
+
+          <div className='ms-Grid-row'>
+            <CardSection />
+          </div>
+          <div className='ms-Grid-row'>
+            <OperationTable />
+          </div>
+
+        </div>
+      </div>
     </div>
   );
 }
